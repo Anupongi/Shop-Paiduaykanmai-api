@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "328e3478-067d-42b2-a1c0-b50d7cddb798",
+		"name": "shop-paiduaykanmai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getStore",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dev}}api/v1/store",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createStore",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"store_name\":\"test\",\r\n    \"detail\":\"fcsedfvsddfvsd\",\r\n    \"phone_number\":\"0979534778\",\r\n    \"address\":\"47/2 ซอย11 บ้านบวกครกใหม่ หมู่ที่6 ต.สำราญราษฎร์ อำเภอดอยสะเก็ด เชียงใหม่ 50220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}api/v1/store",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_single_store",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxaWQiOiJrYW1jaGFpQDIwMjIiLCJpYXQiOjE2NDI5NDIyNDksImV4cCI6MTY0NTUzNDI0OX0.8H90_gbh_vztD4LtH1KX2TR2APtAXM2H7P5NFagg3Pg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 1,\n    \"id_year\": 1,\n    \"id_std\": 6349010002,\n    \"id_class\": 1,\n    \"prefix\": \"นาย\",\n    \"first_name\": \"กำชัย\",\n    \"last_name\": \"บุญศรี\",\n    \"phone\": \"0904672298\",\n    \"email\": \"kamchai@gmail.com\",\n    \"images_url\": \"http://kamchai.com/images.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}api/v1/store/2",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"store",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStore",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"store_name\": \"\",\r\n    \"detail\": \"\",\r\n    \"phone_number\": \"\",\r\n    \"address\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}api/v1/store/4",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"store",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductCate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dev}}api/v1/product/productCate",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"product",
+						"productCate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{dev}}api/v1/product/store/28",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"product",
+						"store",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"detail\": \"ทดสอบทดสอบทดสอบทดสอบ\",\r\n    \"id_product_cate\": 3,\r\n    \"price\": 500,\r\n    \"product_name\": \"ทดสอบ\",\r\n    \"unit\": \"ทดสอบ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}api/v1/product/store/29",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"product",
+						"store",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"detail\": \"fewf\",\r\n\"id_product_cate\": 1,\r\n\"id_store\": 2,\r\n\"price\": 50,\r\n\"product_name\": \"fewf\",\r\n\"unit\": \"fewfew\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dev}}api/v1/product",
+					"host": [
+						"{{dev}}api"
+					],
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
